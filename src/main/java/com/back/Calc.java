@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Calc {
     public static int run(String s) {
 
-        if (s.startsWith("(")&&s.endsWith(")")) {
+        //쓸모없는 괄호 계속 제거
+        while (s.startsWith("(") && s.endsWith(")")) {
             s = s.substring(1, s.length() - 1);
-            
         }
 
         String[] parts = s.split(" ");
