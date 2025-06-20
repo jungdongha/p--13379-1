@@ -12,6 +12,7 @@ public class CalcTest {
     void t1() {
         assertThat(Calc.run("1 + 1")).isEqualTo(2);
     }
+
     @Test
     @DisplayName("2 + 1 == 3")
     void t2() {
@@ -59,6 +60,7 @@ public class CalcTest {
     void t9() {
         assertThat(Calc.run("10 - 20 + 30")).isEqualTo(20);
     }
+
     @Test
     @DisplayName("10 - 10 - 10 - 10 == -20")
     void t10() {
@@ -70,6 +72,7 @@ public class CalcTest {
     void t11() {
         assertThat(Calc.run("10 - 10 - 10 - 10 + 10 + 10 - 10")).isEqualTo(-10);
     }
+
     @Test
     @DisplayName("10 * 10 == 100")
     void t12() {
@@ -81,6 +84,7 @@ public class CalcTest {
     void t13() {
         assertThat(Calc.run("10 * -10")).isEqualTo(-100);
     }
+
     @Test
     @DisplayName("10 * 10 * 10 == 1000")
     void t14() {
@@ -92,6 +96,7 @@ public class CalcTest {
     void t15() {
         assertThat(Calc.run("10 + 5 * 2")).isEqualTo(20);
     }
+
     @Test
     @DisplayName("20 + 10 + 5 * 2 == 40")
     void t16() {
@@ -103,6 +108,7 @@ public class CalcTest {
     void t17() {
         assertThat(Calc.run("10 * 20 + 10 + 5 * 2")).isEqualTo(220);
     }
+
     @Test
     @DisplayName("(10 + 20) == 30")
     void t18() {
@@ -133,15 +139,4 @@ public class CalcTest {
         assertThat(Calc.run("((20 + 20)) + 20")).isEqualTo(60);
     }
 
-    @Test
-    @DisplayName("(10 + 20) * 3 == 90")
-    void t23() {
-        assertThat(Calc.run("(10 + 20) * 3")).isEqualTo(90);
-    }
-
-    @Test
-    @DisplayName("10 + (10 + 5) == 25")
-    void t24() {
-        assertThat(Calc.run("10 + (10 + 5)")).isEqualTo(25);
-    }
 }

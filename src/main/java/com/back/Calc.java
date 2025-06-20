@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class Calc {
     public static int run(String s) {
 
+        if (s.startsWith("(")&&s.endsWith(")")) {
+            s = s.substring(1, s.length() - 1);
+            
+        }
+
         String[] parts = s.split(" ");
 
         ArrayList<String> op = new ArrayList<>();
@@ -13,7 +18,7 @@ public class Calc {
         //초기값 nums에 넣기
         nums.add(Integer.parseInt(parts[0]));
 
-
+        
         //i는 1 3
         for(int i =1;i<parts.length;i+=2) {
             op.add(parts[i]);
